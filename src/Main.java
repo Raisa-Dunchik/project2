@@ -1,29 +1,28 @@
 
+
 public class Main {
     public static void main(String[] args) {
-        Dog dogBobik = new Dog("Бобик");
-        dogBobik.run(150);
-        dogBobik.swim(5);
+        Shape circle = new Circle(5, "Красный", "Черный");
+        Shape rectangle = new Rectangle(4, 6, "Синий", "Зеленый");
+        Shape triangle = new Triangle(3, 4, 5, "Желтый", "Фиолетовый");
 
-        Cat catMurzik = new Cat("Мурзик");
-        catMurzik.run(180);
-        catMurzik.swim(5);
+        // Вывод информации о фигурах
+        System.out.println("Круг:");
+        System.out.println("Периметр: " + circle.getPerimeter());
+        System.out.println("Площадь: " + circle.getArea());
+        System.out.println("Цвет заливки: " + circle.getColor());
+        System.out.println("Цвет границы: " + circle.getBorderColor());
 
-        FoodBowl foodBowl = new FoodBowl(5); // Изначально в миске 5 порций еды
-        Cat[] cats = {new Cat("Мурзик 1"), new Cat("Мурзик 2"), new Cat("Мурзик 3")};
+        System.out.println("\nПрямоугольник:");
+        System.out.println("Периметр: " + rectangle.getPerimeter());
+        System.out.println("Площадь: " + rectangle.getArea());
+        System.out.println("Цвет заливки: " + rectangle.getColor());
+        System.out.println("Цвет границы: " + rectangle.getBorderColor());
 
-        for (Cat cat : cats) {
-            cat.eat(foodBowl);
-        }
-
-        System.out.println("В миске осталось еды: " + foodBowl.getFoodAmount() + " порций.");
-        for (Cat cat : cats) {
-            System.out.println(cat.isFull()); // Вместо cat.name
-        }
-
-        // Печать количества животных
-        System.out.println("Количество животных: " + Animal.getAnimalCount());
-        System.out.println("Количество собак: " + Dog.getDogCount());
-        System.out.println("Количество котов: " + Cat.getCatCount());
+        System.out.println("\nТреугольник:");
+        System.out.println("Периметр: " + triangle.getPerimeter());
+        System.out.println("Площадь: " + triangle.getArea());
+        System.out.println("Цвет заливки: " + triangle.getColor());
+        System.out.println("Цвет границы: " + triangle.getBorderColor());
     }
 }
